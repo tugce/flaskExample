@@ -1,0 +1,40 @@
+<html>
+  <head>
+    <title>Welcome to ScrnnSht</title>
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+      <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+      <style>
+	.row > .span3 {
+		    display: inline-block !important;
+		        vertical-align: middle !important;
+	}
+      </style>
+  </head>
+  <body>
+  <div class=jumbotron>
+	  <div class="container">
+		  <h1 class=title">Welcome to ScreenShot</h1>
+	</div>
+  </div><!--jumbotron-->
+  <div class="container">
+  <form action="{{ url_for('test') }}" method="post">
+	  <div class=row>
+		  <div class="col-sm-7">
+		        <input type="text" name="url" placeholder="URL">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-7">
+		        <input type="text" name="email" placeholder="Email">
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-7">
+		        <input type="submit" value="Submit!" />
+		</div>
+	</div>
+    </form>
+  </div><!--container-->
+  </body>
+</html>
