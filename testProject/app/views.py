@@ -4,7 +4,6 @@ from flask.ext.mail import Message
 from config import ADMINS
 import sys
 import time
-import os
 from PyQt4.QtCore import *
 from PyQt4.QtGui import *
 from PyQt4.QtWebKit import *
@@ -30,7 +29,6 @@ def test():
         with app.open_resource("../website.png") as fp:
                 msg.attach("../website.png", "image/png", fp.read())
         mail.send(msg)
-        os.command("01 04 * * * python manager.py komut")
     return render_template('index.html', title='Home');
 
 class Screenshot(QWebView):
